@@ -26,8 +26,8 @@ public class PaymentServiceImpl implements PaymentService {
 	@Override
 	@Transactional
 	public void doPayment(PaymentServiceModel model) {
-		paymentRepository.save(mapper.toPaymentEntity(model, PaymentStatus.PAYMENT_REJECTED));
-		sendPaymentResultMessage(model, Status.FAILED);
+		paymentRepository.save(mapper.toPaymentEntity(model, PaymentStatus.PAYMENT_APPROVED));
+		sendPaymentResultMessage(model, Status.SUCCESSFUL);
 	}
 
 	private void sendPaymentResultMessage(PaymentServiceModel model, Status status) {
