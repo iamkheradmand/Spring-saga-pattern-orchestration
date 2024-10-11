@@ -12,10 +12,7 @@ The project consists of the following microservices:
 - 📌 Services do not communicate directly with each other.
 - 📌 RabbitMQ is used for asynchronous communication between services.
 
-
-
-![diagram-1](documentation/diagram_1.png)
-
+<img src="documentation/diagram_1.png" width=70% height=70%>
 
 # 🔄 Saga Flow
 1. An order is created in the Order Service.
