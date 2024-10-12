@@ -1,5 +1,7 @@
 package com.common.config;
 
+import com.common.common.RabbitMqSender;
+
 import org.springframework.amqp.core.AcknowledgeMode;
 import org.springframework.amqp.rabbit.config.RetryInterceptorBuilder;
 import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory;
@@ -9,7 +11,6 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.rabbit.retry.RejectAndDontRequeueRecoverer;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -63,6 +64,12 @@ public class RabbitConfig {
 	@ConditionalOnMissingBean
 	public RabbitAdmin rabbitAdmin(ConnectionFactory connectionFactory) {
 		return new RabbitAdmin(connectionFactory);
+	}
+
+	@Bean
+	@ConditionalOnMissingBean
+	public RabbitMqSender rabbitMqSender(RabbitTemplate rabbitTemplate) {
+		return new RabbitMqSender(rabbitTemplate);
 	}
 
 }
