@@ -2,15 +2,15 @@ package com.order.lisener;
 
 import com.order.service.OrderService;
 import lombok.AllArgsConstructor;
-import com.common.dto.OrderCancelRequest;
-import com.common.dto.OrderCompleteRequest;
+import com.saga.orchestration.common.dto.OrderCancelRequest;
+import com.saga.orchestration.common.dto.OrderCompleteRequest;
 import com.order.mapper.OrderServiceMapper;
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
-import static com.common.common.RabbitConstants.orderCancelQueue;
-import static com.common.common.RabbitConstants.orderCompleteQueue;
+import static com.saga.orchestration.common.common.RabbitConstants.orderCancelQueue;
+import static com.saga.orchestration.common.common.RabbitConstants.orderCompleteQueue;
 
 @Component
 @AllArgsConstructor

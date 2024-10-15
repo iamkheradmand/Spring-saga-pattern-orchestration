@@ -1,7 +1,7 @@
 package com.order.controller;
 
 import com.order.controller.dto.CreateOrderRequest;
-import com.common.dto.ApiResponse;
+import com.saga.orchestration.common.dto.ApiResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import com.order.mapper.OrderServiceMapper;

@@ -1,6 +1,6 @@
 package com.saga.orchestration.notification.mapper;
 
-import com.common.dto.NotificationRequest;
+import com.saga.orchestration.common.dto.NotificationRequest;
 import com.saga.orchestration.notification.service.model.NotificationServiceModel;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;

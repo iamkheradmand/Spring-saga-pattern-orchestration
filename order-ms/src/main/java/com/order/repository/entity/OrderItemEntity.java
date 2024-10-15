@@ -3,7 +3,7 @@ package com.order.repository.entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import com.common.enums.OrderStatus;
+import com.saga.orchestration.common.enums.OrderStatus;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

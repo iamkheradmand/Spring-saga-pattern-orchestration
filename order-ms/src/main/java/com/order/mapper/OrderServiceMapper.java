@@ -1,11 +1,11 @@
 package com.order.mapper;
 
 import com.order.controller.dto.CreateOrderRequest;
-import com.common.dto.OrderCreatedRequest;
+import com.saga.orchestration.common.dto.OrderCreatedRequest;
 import com.order.service.model.OrderServiceModel;
-import com.common.dto.OrderCancelRequest;
-import com.common.dto.OrderCancelResult;
-import com.common.dto.OrderCompleteRequest;
+import com.saga.orchestration.common.dto.OrderCancelRequest;
+import com.saga.orchestration.common.dto.OrderCancelResult;
+import com.saga.orchestration.common.dto.OrderCompleteRequest;
 import com.order.repository.entity.OrderItemEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

@@ -1,10 +1,10 @@
 package com.payment.mapper;
 
-import com.common.dto.PaymentRequest;
-import com.common.enums.PaymentStatus;
-import com.common.enums.Status;
+import com.saga.orchestration.common.dto.PaymentRequest;
+import com.saga.orchestration.common.enums.PaymentStatus;
+import com.saga.orchestration.common.enums.Status;
 import com.payment.service.model.PaymentServiceModel;
-import com.common.dto.PaymentResult;
+import com.saga.orchestration.common.dto.PaymentResult;
 import com.payment.repository.entity.PaymentEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

@@ -1,10 +1,10 @@
 package com.orchestrator.service;
 
-import com.common.dto.InventoryCheckResult;
-import com.common.dto.InventoryReverseResult;
-import com.common.dto.OrderCancelResult;
-import com.common.dto.OrderCreatedRequest;
-import com.common.dto.PaymentResult;
+import com.saga.orchestration.common.dto.InventoryCheckResult;
+import com.saga.orchestration.common.dto.InventoryReverseResult;
+import com.saga.orchestration.common.dto.OrderCancelResult;
+import com.saga.orchestration.common.dto.OrderCreatedRequest;
+import com.saga.orchestration.common.dto.PaymentResult;
 
 public interface OrchestrationService {
 

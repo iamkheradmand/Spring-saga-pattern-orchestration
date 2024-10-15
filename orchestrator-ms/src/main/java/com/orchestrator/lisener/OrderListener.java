@@ -1,7 +1,7 @@
 package com.orchestrator.lisener;
 
-import com.common.dto.OrderCancelResult;
-import com.common.dto.OrderCreatedRequest;
+import com.saga.orchestration.common.dto.OrderCancelResult;
+import com.saga.orchestration.common.dto.OrderCreatedRequest;
 import com.orchestrator.service.OrchestrationService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -9,8 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
-import static com.common.common.RabbitConstants.orderCancelResultQueue;
-import static com.common.common.RabbitConstants.orderCreatedQueue;
+import static com.saga.orchestration.common.common.RabbitConstants.orderCancelResultQueue;
+import static com.saga.orchestration.common.common.RabbitConstants.orderCreatedQueue;
 
 @Slf4j
 @Component

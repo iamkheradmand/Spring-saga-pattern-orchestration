@@ -9,7 +9,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<groupId>com.common</groupId>
+	<groupId>com.saga.orchestration.common</groupId>
 	<artifactId>common</artifactId>
 	<version>0.0.2-SNAPSHOT</version>
 
@@ -19,6 +19,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<mapstruct.version>1.4.2.Final</mapstruct.version>
 		<lombok-mapstruct.verson>0.2.0</lombok-mapstruct.verson>
+		<testcontainers.version>1.20.2</testcontainers.version>
 	</properties>
 
 	<dependencies>
@@ -55,6 +56,11 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+		</dependency>
+
+		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>false</optional>
@@ -75,6 +81,7 @@
 			<artifactId>mapstruct-processor</artifactId>
 			<version>${mapstruct.version}</version>
 		</dependency>
+
 
 	</dependencies>
 

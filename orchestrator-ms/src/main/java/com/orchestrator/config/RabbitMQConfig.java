@@ -1,6 +1,6 @@
 package com.orchestrator.config;
 
-import com.common.common.RabbitConstants;
+import com.saga.orchestration.common.common.RabbitConstants;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -11,6 +11,10 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class RabbitMQConfig {
+
+	public RabbitMQConfig(){
+		System.out.println("RabbitMQConfig starts: ");
+	}
 
 	@Configuration
 	public static class OrderConfig {

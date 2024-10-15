@@ -1,6 +1,6 @@
 package com.orchestrator.lisener;
 
-import com.common.dto.PaymentResult;
+import com.saga.orchestration.common.dto.PaymentResult;
 import com.orchestrator.service.OrchestrationService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -8,7 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
-import static com.common.common.RabbitConstants.paymentResultQueue;
+import static com.saga.orchestration.common.common.RabbitConstants.paymentResultQueue;
 
 @Slf4j
 @Component

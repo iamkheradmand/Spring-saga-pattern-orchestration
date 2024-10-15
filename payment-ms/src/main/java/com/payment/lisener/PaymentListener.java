@@ -1,7 +1,7 @@
 package com.payment.lisener;
 
-import com.common.common.RabbitConstants;
-import com.common.dto.PaymentRequest;
+import com.saga.orchestration.common.common.RabbitConstants;
+import com.saga.orchestration.common.dto.PaymentRequest;
 import com.payment.mapper.PaymentServiceMapper;
 import lombok.AllArgsConstructor;
 import com.payment.service.PaymentService;

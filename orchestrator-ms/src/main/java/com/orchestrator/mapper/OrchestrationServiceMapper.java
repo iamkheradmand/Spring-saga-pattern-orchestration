@@ -1,14 +1,14 @@
 package com.orchestrator.mapper;
 
-import com.common.dto.InventoryCheckRequest;
-import com.common.dto.InventoryCheckResult;
-import com.common.dto.InventoryReverseRequest;
-import com.common.dto.InventoryReverseResult;
-import com.common.dto.OrderCancelRequest;
-import com.common.dto.OrderCompleteRequest;
-import com.common.dto.OrderCreatedRequest;
-import com.common.dto.PaymentRequest;
-import com.common.dto.PaymentResult;
+import com.saga.orchestration.common.dto.InventoryCheckRequest;
+import com.saga.orchestration.common.dto.InventoryCheckResult;
+import com.saga.orchestration.common.dto.InventoryReverseRequest;
+import com.saga.orchestration.common.dto.InventoryReverseResult;
+import com.saga.orchestration.common.dto.OrderCancelRequest;
+import com.saga.orchestration.common.dto.OrderCompleteRequest;
+import com.saga.orchestration.common.dto.OrderCreatedRequest;
+import com.saga.orchestration.common.dto.PaymentRequest;
+import com.saga.orchestration.common.dto.PaymentResult;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 

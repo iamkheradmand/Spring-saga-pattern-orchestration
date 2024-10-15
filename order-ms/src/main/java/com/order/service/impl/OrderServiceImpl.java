@@ -1,14 +1,14 @@
 package com.order.service.impl;
 
-import com.common.common.RabbitConstants;
-import com.common.dto.OrderCreatedRequest;
+import com.saga.orchestration.common.common.RabbitConstants;
+import com.saga.orchestration.common.dto.OrderCreatedRequest;
 import com.order.mapper.OrderServiceMapper;
 import com.order.service.model.OrderServiceModel;
 import com.order.repository.OrderRepository;
 import com.order.repository.entity.OrderItemEntity;
 import com.order.service.OrderService;
 import lombok.RequiredArgsConstructor;
-import com.common.enums.OrderStatus;
+import com.saga.orchestration.common.enums.OrderStatus;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

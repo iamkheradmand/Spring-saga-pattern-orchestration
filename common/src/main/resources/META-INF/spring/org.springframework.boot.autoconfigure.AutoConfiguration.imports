@@ -1,1 +1,1 @@
-com.common.config.RabbitConfig
+com.saga.orchestration.common.config.RabbitConfig

@@ -1,8 +1,8 @@
 package com.payment.service.impl;
 
-import com.common.common.RabbitConstants;
-import com.common.enums.PaymentStatus;
-import com.common.enums.Status;
+import com.saga.orchestration.common.common.RabbitConstants;
+import com.saga.orchestration.common.enums.PaymentStatus;
+import com.saga.orchestration.common.enums.Status;
 import com.payment.mapper.PaymentServiceMapper;
 import com.payment.service.model.PaymentServiceModel;
 import com.payment.service.PaymentService;

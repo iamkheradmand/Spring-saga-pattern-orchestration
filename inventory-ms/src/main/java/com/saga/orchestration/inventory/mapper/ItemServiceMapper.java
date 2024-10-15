@@ -1,12 +1,12 @@
 package com.saga.orchestration.inventory.mapper;
 
 import com.saga.orchestration.inventory.service.model.ItemServiceModel;
-import com.common.dto.InventoryCheckRequest;
-import com.common.dto.InventoryCheckResult;
-import com.common.dto.InventoryReverseRequest;
-import com.common.dto.InventoryReverseResult;
-import com.common.enums.InventoryStatus;
-import com.common.enums.Status;
+import com.saga.orchestration.common.dto.InventoryCheckRequest;
+import com.saga.orchestration.common.dto.InventoryCheckResult;
+import com.saga.orchestration.common.dto.InventoryReverseRequest;
+import com.saga.orchestration.common.dto.InventoryReverseResult;
+import com.saga.orchestration.common.enums.InventoryStatus;
+import com.saga.orchestration.common.enums.Status;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.ReportingPolicy;

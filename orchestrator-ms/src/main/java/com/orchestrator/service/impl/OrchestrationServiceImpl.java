@@ -1,15 +1,15 @@
 package com.orchestrator.service.impl;
 
-import com.common.common.RabbitMqSender;
-import com.common.dto.InventoryCheckResult;
-import com.common.dto.InventoryReverseResult;
-import com.common.dto.NotificationRequest;
-import com.common.dto.OrderCancelResult;
-import com.common.dto.OrderCreatedRequest;
-import com.common.dto.PaymentResult;
-import com.common.enums.InventoryStatus;
-import com.common.enums.RabbitMqRouting;
-import com.common.enums.Status;
+import com.saga.orchestration.common.common.RabbitMqSender;
+import com.saga.orchestration.common.dto.InventoryCheckResult;
+import com.saga.orchestration.common.dto.InventoryReverseResult;
+import com.saga.orchestration.common.dto.NotificationRequest;
+import com.saga.orchestration.common.dto.OrderCancelResult;
+import com.saga.orchestration.common.dto.OrderCreatedRequest;
+import com.saga.orchestration.common.dto.PaymentResult;
+import com.saga.orchestration.common.enums.InventoryStatus;
+import com.saga.orchestration.common.enums.RabbitMqRouting;
+import com.saga.orchestration.common.enums.Status;
 import com.orchestrator.mapper.OrchestrationServiceMapper;
 import com.orchestrator.service.OrchestrationService;
 import lombok.RequiredArgsConstructor;

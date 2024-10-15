@@ -1,7 +1,7 @@
 package com.saga.orchestration.notification.lisener;
 
-import com.common.common.RabbitConstants;
-import com.common.dto.NotificationRequest;
+import com.saga.orchestration.common.common.RabbitConstants;
+import com.saga.orchestration.common.dto.NotificationRequest;
 import com.saga.orchestration.notification.mapper.PaymentServiceMapper;
 import lombok.AllArgsConstructor;
 import com.saga.orchestration.notification.service.NotificationService;

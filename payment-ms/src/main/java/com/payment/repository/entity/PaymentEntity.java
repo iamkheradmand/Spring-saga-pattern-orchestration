@@ -1,6 +1,6 @@
 package com.payment.repository.entity;
 
-import com.common.enums.PaymentStatus;
+import com.saga.orchestration.common.enums.PaymentStatus;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

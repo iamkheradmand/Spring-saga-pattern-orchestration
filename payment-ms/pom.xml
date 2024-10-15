@@ -20,7 +20,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>com.common</groupId>
+			<groupId>com.saga.orchestration.common</groupId>
 			<artifactId>common</artifactId>
 			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
