@@ -23,7 +23,7 @@ public class DistributedLockServiceImpl implements DistributedLockService {
 		return checkWithLock(productId);
 	}
 	public boolean checkWithLock(Integer productId) {
-		RLock lock = redissonClient.getLock("inventoryLock");
+		RLock lock = redissonClient.getLock("inventoryLock:" + productId);
 		try {
 			lock.lock();
 			log.info("Lock acquired, performing protected operation : " + Thread.currentThread().getName());
