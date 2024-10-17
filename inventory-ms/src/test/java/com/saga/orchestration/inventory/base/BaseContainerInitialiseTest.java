@@ -1,12 +1,13 @@
-package com.saga.orchestration.inventory;
+package com.saga.orchestration.inventory.base;
 
-import com.saga.orchestration.inventory.BaseContainerInitialiseTest.TestRabbitConfig;
+import com.redis.testcontainers.RedisContainer;
+import com.saga.orchestration.inventory.base.BaseContainerInitialiseTest.TestRabbitConfig;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.testcontainers.containers.MongoDBContainer;
 import org.testcontainers.containers.RabbitMQContainer;
 import org.testcontainers.utility.DockerImageName;
+
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.DirectExchange;
@@ -19,7 +20,9 @@ import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
@@ -27,6 +30,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Import(TestRabbitConfig.class)
 @ExtendWith({ SpringExtension.class })
+@TestPropertySource({"classpath:application-test.properties"})
 @Testcontainers
 public class BaseContainerInitialiseTest {
 
@@ -35,6 +39,9 @@ public class BaseContainerInitialiseTest {
 
 	@Container
 	static RabbitMQContainer rabbitMQContainer = new RabbitMQContainer("rabbitmq:3.8.2-management-alpine");
+
+	@Container
+	static RedisContainer redisContainer = new RedisContainer("redis:alpine");
 
 
 	@DynamicPropertySource
@@ -45,6 +52,9 @@ public class BaseContainerInitialiseTest {
 		registry.add("spring.rabbitmq.port", rabbitMQContainer::getAmqpPort);
 		registry.add("spring.rabbitmq.username", rabbitMQContainer::getAdminUsername);
 		registry.add("spring.rabbitmq.password", rabbitMQContainer::getAdminPassword);
+		registry.add("spring.rabbitmq.password", rabbitMQContainer::getAdminPassword);
+		registry.add("spring.redis.host", redisContainer::getHost);
+		registry.add("spring.redis.port", redisContainer::getRedisPort);
 	}
 
 	@RequiredArgsConstructor

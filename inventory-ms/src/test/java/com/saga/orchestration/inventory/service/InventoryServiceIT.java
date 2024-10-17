@@ -1,8 +1,6 @@
 package com.saga.orchestration.inventory.service;
 
-import java.util.List;
-
-import com.saga.orchestration.inventory.BaseContainerInitialiseTest;
+import com.saga.orchestration.inventory.base.BaseContainerInitialiseTest;
 import com.saga.orchestration.inventory.repository.InventoryRepository;
 import com.saga.orchestration.inventory.repository.entity.ItemEntity;
 import com.saga.orchestration.inventory.service.model.ItemServiceModel;
